@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialised;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --text-color: #0F172A;
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+
+    font-size: 1.6rem;
+    background: #f8fafc;
+
+    height: 100vh;
+    display: grid;
+    place-content: center;
+
+    color: var(--text-color);
+
+}
+
+main {
+
+    padding: 6.4rem 8rem;
+    background: #ffff;
+    box-shadow: 0rem 0.4rem 3.2rem rgba(15, 23, 42, 0.15);
+    border-radius: 1.6rem;
+
+    display: grid;
+    gap: 6.4rem;
+}
+
+section h2{
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+
+/*==============================*/
+
+.convert .table {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+
+}
+
+.money-table {
+    background-color: white;
+    outline: .1rem solid #94a3b8;
+
+    width: 27rem;
+    padding: 1.6rem;
+    border-radius: 0.8rem;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.money-table:hover,
+.money-table:has(:focus) {
+    outline: 0.25rem solid #7C3AED;
+}
+
+
+.value {
+    border: 0;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    color: var(--text-color);
+    width: 50%;
+}
+
+.value:focus {
+    outline: 0;
+}
+
+/*===================*/
+.dropOption {
+    --bg-hover: #ede9fe;
+    width: 13rem;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    height: 5.6rem;
+    overflow: hidden;
+}
+.dropOption:hover{
+    height: fit-content;
+    overflow: initial;
+}
+
+/*====================*/
+.chose {
+
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    border-radius: 0 0.8rem 0.8rem 0;
+
+    padding: 1.6rem;
+
+    cursor: pointer;
+}
+li:hover,
+.chose:hover {
+    background-color: var(--bg-hover);
+}
+
+.chose::before {
+    content: "";
+    height: 2.4rem;
+    width: 0.1rem;
+    border-right: 1px solid #94a3b8 ;
+    
+    position: absolute;
+    left: 0;
+}
+
+.chose::after {
+    content: "";
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(./images/majesticons_chevron-down-line.svg) no-repeat;
+}
+/*=====================================*/
+ul{
+    list-style: none;
+
+    background-color: white;
+    box-shadow: 0px 4px 16px rgba(15,23,42,0.15);
+    border-radius: 8px;
+
+    padding: 0;
+
+    width: 16rem;
+    max-height: 17rem;
+
+    margin-top: .8rem;
+
+    overflow: scroll;
+
+    position: relative;
+    z-index: 1;
+
+}
+
+li{
+    padding: 1.3rem 1.6rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    cursor: pointer;
+}
+
+
+/*=====================================*/
+.fis.fis{
+    font-size: 2.4rem;
+    border-radius: 50%;
+}
+
+
+/*----------------------*/
+
+.exchange .table {
+    margin-top: 2.4rem;
+
+}
+
+.tooltip {
+    background-color: white;
+    box-shadow: 0 0.4rem 1.6rem rgb(15 23 42 / .15);
+    border-radius: .4rem;
+    padding: .8rem;
+}
+
+.time-graph{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -2.2rem .8rem 0 4.8rem;
+}
+
+.time-graph button{
+    background-color: transparent;
+    border: 0;
+
+    width: 4rem;
+    height: 1.4rem;
+
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    text-align:center;
+
+    cursor: pointer;
+}
+
+.time-graph button:hover,
+.time-graph button.active{
+    background-color: #7C3AED;
+    color: white;
+    border-radius: 99px;
+}
+/*==========Responsivo===========*/
+
+
+@media (max-width: 48rem){
+    main{
+        padding: 1.6rem;
+        gap: 3.2rem;
+    }
+    section h2{
+        font-size: 1.6rem;
+    }
+    section{
+        font-size: 1.6rem;
+    }
+    .convert .table{
+        flex-direction: column;
+        gap: .8rem;
+    }
+    .money-table{
+        width: 100%;
+        
+    }
+
+}   

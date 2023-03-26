@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conversor de Moedas</title>
+
+    <link rel="stylesheet" href="./esthetic.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
+
+</head>
+
+<body>
+    <main>
+        <section class="convert">
+
+            <h2>Currency convert</h2>
+            <div class="table">
+
+                <div class="money-table">
+
+                    <input readonly type="text" class="value" value="$ 1000">
+
+
+                    <div class="dropOption">
+
+                        <div class="chose">
+                            <span class="fi fi-us fis"></span>
+                            USD
+                        </div>
+                        <ul>
+                            <li>
+                                <span class="fi fi-br fis"></span>
+                                BRL
+                            </li>
+                            <li>
+                                <span class="fi fi-us fis"></span>
+                                USD
+                            </li>
+                            <li>
+                                <span class="fi fi-eu fis"></span>
+                                EUR
+                            </li>
+                            <li>
+                                <span class="fi fi-gb fis"></span>
+                                GBP
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="middle">
+                    <img src="./images/arrows-exchange.svg" alt="Trocar">
+                </div>
+
+                <div class="money-table">
+
+                    <input readonly type="text" class="value" value="R$ 5253,70">
+
+                    <div class="dropOption">
+
+                        <div class="chose">
+                            <span class="fi fi-br fis"></span>
+                            BRL
+                        </div>
+                        <ul>
+                            <li>
+                                <span class="fi fi-br fis"></span>
+                                BRL
+                            </li>
+                            <li>
+                                <span class="fi fi-us fis"></span>
+                                USD
+                            </li>
+                            <li>
+                                <span class="fi fi-eu fis"></span>
+                                EUR
+                            </li>
+                            <li>
+                                <span class="fi fi-gb fis"></span>
+                                GBP
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="exchange">
+            <h2>Exchange tax</h2>
+            <div class="table"></div>
+            <div id="graph"></div>
+            <div class="time-graph">
+                <button>1 D</button>
+                <button>5 D</button>
+                <button class="active">1 M</button>
+                <button>1 Y</button>
+                <button>5 Y</button>
+                <button>Max</button>
+            </div>
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./function.js"></script>
+</body>
+
+</html>
