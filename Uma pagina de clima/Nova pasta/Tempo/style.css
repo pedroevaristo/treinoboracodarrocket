@@ -15,6 +15,13 @@ body {
     font-size: 1.6rem;
 }
 
+
+section {
+    background: #6d67d0;
+    backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+}
+
 main {
     background: url(/img/Background.jpg) no-repeat center/cover;
 
@@ -27,6 +34,22 @@ main {
 
     gap: 2.4rem;
 }
+
+
+h2.title {
+    /*colocou junto h2.title, mas quando separado n funciona*/
+    color: #dad8f7;
+    font-size: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    margin: 3.2rem;
+}
+
+/*---------------WEATHER-NOW------------------------------------*/
 
 .weather-now::before {
     content: "";
@@ -57,7 +80,7 @@ main {
 
 }
 
-/*----------------------------------*/
+/*---------LOCALIZATION-----------------------*/
 .localization {
     justify-self: end;
 
@@ -75,6 +98,8 @@ main {
     color: #c2bff4;
 }
 
+
+/*---------------TEMPERATURE----------------------------*/
 .temperature {
     /* text-align: center; */
     margin: 6rem;
@@ -115,7 +140,8 @@ main {
     margin-top: 1.5rem;
 }
 
-/*------------------------------------*/
+/*------STATISTICS------------------------*/
+
 .statistics {
     padding: 1.2rem;
 
@@ -154,7 +180,9 @@ main {
 
 }
 
-/*------------------------------------*/
+/*-------AIR-QUALITY-------------------------*/
+
+
 .air-quality {
     font-weight: 700;
     text-align: center;
@@ -200,21 +228,7 @@ main {
 
 
 
-
-h2.title {
-    /*colocou junto h2.title, mas quando separado n funciona*/
-    color: #dad8f7;
-    font-size: 1.6rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-
-    margin: 3.2rem;
-}
-
-/*-------------------------------------*/
+/*---------SUN-SET--------------------*/
 .sunset-time-graph-space {
 
     margin-top: 4rem;
@@ -255,6 +269,8 @@ h2.title {
     width: 21.6rem;
     height: 10.8rem;
     overflow: hidden;
+
+    color: white;
 }
 
 .graph-time::before {
@@ -304,14 +320,55 @@ time.clock{
     top: 25%;
     left: 50%;
 
+    color: white ;
+    font-size: 1.4rem;
+    font-weight: 700;
+    
     transform: translate(-50%);
 }
+/*-------------------------------------*/
+.week-weather{
+    padding: 4rem;
+    
+    display: flex;
+    gap: 1.2rem;
+}
 
+.day{
+    flex: 1;
+
+    display: grid;
+    justify-items: center;
+    gap: 1.6rem;
+
+}
+
+h4.when{
+    font-size: 1.4rem;
+    color: #dad8f7;
+}
+
+.day .max-min{
+    font-size: 700;
+    color: white;
+}
+
+.day .max-min span{
+    color: #c2bff4;
+}
 
 /*------------------------------------*/
 
-section {
-    background: #6d67d0;
-    backdrop-filter: blur(1rem);
-    border-radius: 1rem;
+@media (min-width: 1200px){
+    main{
+        grid-template-columns: 48rem 27.7rem 27.7rem;
+        grid-template-rows: 24.4rem 21.2rem;
+    }
+
+    .weather-now{
+        grid-row: 1/3;
+    }
+    .week-weather{
+        grid-column: 2/4;
+    }
 }
