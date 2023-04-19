@@ -5,10 +5,100 @@
     -webkit-font-smoothing: antiliased;
     -moz-osx-font-smoothing: grayscale;
 }
-:root{
-font-size: 62.5%;
+
+:root {
+    font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 1.6rem;
+}
+
+.flex {
+    display: flex;
+}
+
+#page {
+    height: 100vh;
+}
+
+#page>* {
+    width: 50%;
+
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+header img {
+    width: 16rem;
+    height: 5.4rem;
+}
+
+#page>div {
+    padding: 4rem 11.2rem;
+}
+
+main {
+    margin-top: 11.4rem;
+}
+
+title {
+    max-width: 35rem;
+}
+
+form{
+    margin-top: 4rem;
+}
+
+form button{
+    all: unset;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 2.4rem;
+
+    background: #7c3aed;
+    border-radius: 0.4rem;
+
+    width: 100%;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #ffff;
+}
+
+form button:active,
+form button:hover,
+form button:focus{
+    outline: 2px solid black;
+    border-radius: 0.2rem;
+}
+
+
+form input{
+    width: 100%;
+
+    background:#ffff ;
+    border: 0.1rem solid #e2e8f0;
+    border-radius: 0.4rem;
+
+    padding: 1.6rem 1.2rem;
+
+    margin-top: 0.8rem;
+
+}
+
+form whole-input + whole-input{
+    margin-top: 1.6rem;
+
+}
+
+.whole-input{
+    justify-content: space-between;
 }
