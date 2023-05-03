@@ -1,1 +1,1 @@
-Parei no min 33:37 
+Parei no min 39:26
